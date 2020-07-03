@@ -1,0 +1,76 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 20px hsl(0, 0%, 90%);
+}
+
+h1 {
+    font-family: Roboto, Arial;
+    font-size: 3.6rem;
+    margin-top: 0rem;
+    margin-bottom: 0.8rem;
+}
+
+h2 {
+    font-family: Roboto, Arial;
+    font-size: 2.6rem;
+    font-weight: normal;
+    color: hsl(0, 0%, 20%);
+    margin-top: 0rem;
+    margin-bottom: 1.6rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Robot, Arial;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.icon-span {
+    font-size: 5.3rem;
+    margin-right: 1.6rem;
+}
+
+#main-title {
+    width: 50%;
+}
+
+#university-icon {
+    color: hsl(0, 0%, 0%);
+}
+
+#menu-icon {
+    padding-bottom: 1.2rem;
+    float: right;
+}
+
+#main-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: auto;
+}
+
+#socials-div {
+    width: 80%;
+    margin: auto;
+    padding: 1.6rem 0rem 1.6rem 0rem;
+}
