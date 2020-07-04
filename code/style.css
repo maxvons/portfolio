@@ -15,7 +15,8 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -4px 20px hsl(0, 0%, 90%);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 h1 {
@@ -44,9 +45,77 @@ img {
     max-width: 100%;
 }
 
+a:link, a:visited {
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+}
+
+a:hover {
+    color: hsl(0, 0%, 30%);
+}
+
 .icon-span {
     font-size: 5.3rem;
     margin-right: 1.6rem;
+}
+
+.black-text {
+    color: hsl(0, 0%, 0%);
+}
+
+.project-card {
+    background-color: hsl(0, 0, 100%);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    padding-bottom: 0.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.left-padding {
+    padding-left: 1.6rem;
+}
+
+.right-margin {
+    margin-right: 0.8rem;
+}
+
+.view-project-text {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.project-text {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-desc-text {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.line-height-paragraph {
+    line-height: 1.5;
+}
+
+.faint-text {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    margin-top: 0rem;
+    width: 80%;
+}
+
+.content {
+    padding-top: 0px;
+}
+
+.sticky + .content {
+    padding-top: 60px;
 }
 
 #main-title {
@@ -66,6 +135,7 @@ img {
     display: grid;
     grid-template-columns: 1fr;
     width: 80%;
+    padding-bottom: 100px;
     margin: auto;
 }
 
@@ -73,4 +143,8 @@ img {
     width: 80%;
     margin: auto;
     padding: 1.6rem 0rem 1.6rem 0rem;
+}
+
+#navbar {
+    background-color: white;
 }
