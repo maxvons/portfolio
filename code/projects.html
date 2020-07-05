@@ -12,12 +12,14 @@
 
 <body>
     
-    <div id="main-div">
-        <nav id="navbar">
+    <nav id="navbar">
+        <div id="logos">
             <img id="logo" src="../icons/portfolio_icon.svg" alt="logo">
             <img id="menu-icon" src="../icons/menu_icon.svg" alt="menu">
-        </nav>
+        </div>
+    </nav>
 
+    <div id="main-div">
         <section>
             <header>
                 <h1 id="main-title">Projects</h1>
@@ -86,20 +88,5 @@
         </div>
     </footer>
 
-
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-    </script>
 </body>
 </html>
