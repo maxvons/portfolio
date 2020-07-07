@@ -38,7 +38,7 @@ h2 {
 
 p {
     font-size: 1.8rem;
-    font-family: Robot, Arial;
+    font-family: Roboto, Arial;
 }
 
 img {
@@ -55,6 +55,121 @@ a:hover {
     color: hsl(0, 0%, 30%);
 }
 
+input {
+    outline: none;
+}
+
+input:not([type=submit]):not([type=radio]) {
+    width: 100%;
+    font-family: Roboto, Arial;
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    padding: 0 0 0.8rem 0;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 1);
+}
+
+input:not([type=submit]):not([type=radio])::placeholder {
+    color: rgba(0, 0, 0, 1);
+}
+
+input:not([type=submit]):not([type=radio])::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 1);
+}
+
+input:not([type=submit]):not([type=radio]):focus::placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+input[type=radio] {
+    cursor: pointer;
+    margin-right: 0.8rem;
+}
+
+label {
+    font-family: Roboto, Arial;
+    font-weight: 300;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-right: 1.6rem;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+    position: relative;
+    padding-left: 2.8rem;
+    cursor: pointer;
+    line-height: 2rem;
+    display: inline-block;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid hsl(0, 0%, 0%);
+    border-radius: 100%;
+    background: #FFF;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #FF6363;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*
+#foo:checked::before,
+input[type="radio"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+}
+
+#foo:checked,
+input[type="radio"] + label::before {
+    content: url('../icons/radio.svg');
+}
+
+input[type="radio"]:checked + label::before {
+    content: url('../icons/radio_checked.svg');
+}
+*/
+
+
+
+div#preload { display: none; }
+
 .icon-span {
     font-size: 4.5rem;
     margin-right: 1.6rem;
@@ -68,7 +183,6 @@ a:hover {
     background-color: hsl(0, 0, 100%);
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
     padding-bottom: 0.8rem;
-    margin-bottom: 3.2rem;
 }
 
 .left-padding {
@@ -77,6 +191,10 @@ a:hover {
 
 .right-margin {
     margin-right: 0.8rem;
+}
+
+.bottom-margin {
+    margin-bottom: 3.2rem;
 }
 
 .view-project-text {
@@ -115,6 +233,106 @@ a:hover {
     scrollbar-width: none;  /* Firefox */
   }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.regular-text {
+    font-weight: 400;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.quad-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex: 4;
+}
+
+.ot-img-gallery-item {
+    user-select: none;
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    font-size: 5rem;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    color: #FF6363;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin: 0 0.2rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #FF6363;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 #main-title {
     width: 50%;
 }
@@ -133,8 +351,32 @@ a:hover {
     grid-template-columns: 1fr;
     width: 80%;
     padding-top: 13.2rem;
-    padding-bottom: 100px;
+    padding-bottom: 10rem;
     margin: auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#com-pref-div {
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+#pref-text {
+    margin-top: 0rem;
+    margin-bottom: 0.8rem;
+    width: 80%;
+}
+
+#message {
+    margin-bottom: 0rem;
 }
 
 #socials-div {
@@ -151,6 +393,7 @@ a:hover {
     align-items: center;
     height: 10rem;
     top: 0;
+    z-index: 99;
     width: 100%;
     background-color: white;
 }
@@ -161,4 +404,15 @@ a:hover {
 
 #logo {
     padding-top: 1rem;
+}
+
+#back-icon {
+    float: left;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-right: 0.8rem;
+}
+
+#ot-img-gallery-wrapper {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.6rem;
 }
