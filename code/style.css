@@ -170,9 +170,53 @@ input[type="radio"]:checked + label::before {
 
 div#preload { display: none; }
 
+.topnav {
+    overflow: hidden;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 3rem 0rem;
+    z-index: 99;
+}
+
+.nav-elements {
+    width: 80%;
+    margin: auto;
+}
+
+/*
+.topnav a {
+    color: #0e0d0d;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+*/
+
+.topnav .nav-icon {
+    display: none;
+}
+
+.nav-text {
+    font-size: 1.8rem;
+    font-family: Roboto, Arial;
+    font-weight: 700;
+}
+
+/*
+.nav-text:hover {
+    color: gray;
+}
+*/
+
 .icon-span {
     font-size: 4.5rem;
     margin-right: 1.6rem;
+}
+
+.left-float {
+    float: left;
 }
 
 .black-text {
@@ -187,6 +231,26 @@ div#preload { display: none; }
 
 .left-padding {
     padding-left: 1.6rem;
+}
+
+.top-padding {
+    padding-top: 14.2rem;
+}
+
+.top-extra-padding {
+    padding-top: 27rem;
+}
+
+.padding-mobile {
+    padding: 0;
+}
+
+.bottom-padding-mobile {
+    padding: 0;
+}
+
+.left-margin {
+    margin-left: 6.4rem;
 }
 
 .right-margin {
@@ -362,14 +426,12 @@ div#preload { display: none; }
 
 #menu-icon {
     font-size: 4.5rem;
-    float: right;
 }
 
 #main-div {
     display: grid;
     grid-template-columns: 1fr;
     width: 80%;
-    padding-top: 13.2rem;
     padding-bottom: 10rem;
     margin: auto;
 }
@@ -404,29 +466,67 @@ div#preload { display: none; }
     padding: 1.6rem 0rem 1.6rem 0rem;
 }
 
-#navbar {
+#navbar-elements {
+    width: 80%;
     display: flex;
-    position: fixed;
-    overflow: hidden;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 10rem;
-    top: 0;
-    z-index: 99;
-    width: 100%;
-    background-color: white;
+    flex-direction: row;
+    border: 1px solid blue;
 }
 
-#logos {
-    width: 80%;
+#nav-text-link-div {
+    padding-top: 1.5rem;
+    float: right;
 }
 
 #logo {
     padding-top: 1rem;
 }
 
+
 #back-icon {
     float: left;
     border: 1px solid rgba(0, 0, 0, 0);
     margin-right: 0.8rem;
+}
+
+@media screen and (max-width: 700px) {
+    #nav-text-link-div {display: none;}
+    .topnav a.nav-icon {
+      float: right;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .topnav.responsive .nav-elements {position: relative;}
+    .topnav.responsive .nav-icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive #nav-text-link-div {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: auto;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .nav-text{
+      text-align: center;
+      margin: 0;
+    }
+    .topnav.responsive .nav-text.padding-mobile {
+        padding-top: 3.2rem;
+        padding-bottom: 1.6rem;
+    }
+    .topnav.responsive .nav-text.bottom-padding-mobile {
+        padding-bottom: 1.6rem;
+    }
 }
