@@ -14,16 +14,23 @@
 
 <body class="hide-scroll">
 
-    <nav id="navbar">
-        <div id="navbar-elements">
-            <img id="logo" src="../icons/portfolio_icon_fixed.svg" alt="logo">
-            <span id="menu-icon">
+    <nav id="navbar" class="topnav">
+        <div class="nav-elements">
+            <a href="index.html" class="left-float">
+                <img id="logo" src="../icons/portfolio_icon_fixed.svg" alt="logo">
+            </a>
+            <div id="nav-text-link-div">
+                <a href="projects.html" class="nav-text padding-mobile">Projects</a>
+                <a href="about.html" class="nav-text left-margin bottom-padding-mobile">About Me</a>
+                <a href="contact.html" class="nav-text left-margin">Contact Me</a>
+            </div>
+            <a id="menu-icon" href="javascript:void(0);" class="nav-icon" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
-            </span>
+            </a>
         </div>
     </nav>
 
-    <div id="main-div">
+    <div id="main-div" class="top-padding">
         <section class="bottom-margin">
             <header>
                 <h1 class="regular-text">Contact me</h1>
@@ -86,5 +93,6 @@
         <img src="../icons/radio_checked.svg" width="1" height="1" alt="Image 02" />
     </div>
 
+    <script src="functions.js"></script>
 </body>
 </html>
