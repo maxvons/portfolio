@@ -202,6 +202,7 @@ div#preload { display: none; }
     font-size: 1.8rem;
     font-family: Roboto, Arial;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 /*
