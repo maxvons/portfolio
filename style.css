@@ -49,10 +49,11 @@ img {
 a:link, a:visited {
     text-decoration: none;
     color: hsl(0, 0%, 0%);
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 60%);
 }
 
 input {
@@ -226,6 +227,10 @@ div#preload { display: none; }
     color: hsl(0, 0%, 0%);
 }
 
+.yellow-text {
+    color: rgb(235, 214, 32) !important; 
+}
+
 .project-card {
     background-color: hsl(0, 0, 100%);
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
@@ -275,6 +280,10 @@ div#preload { display: none; }
 }
 
 .view-project-text {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Roboto, Arial;
     font-weight: bold;
     font-size: 1.6rem;
 }
@@ -569,6 +578,20 @@ div#preload { display: none; }
     }
 }
 
+@media screen and (min-width: 700px) {
+    .nav-text:hover {
+        border-bottom: 3px solid #FF6363;
+    }
+    
+    .nav-text:active {
+        border-bottom: 3px solid #FF6363;
+    }
+    
+    .active-link {
+        border-bottom: 3px solid #FF6363;
+    }
+}
+
 /* Desktop layout */
 @media screen and (min-width: 1000px) {
     p {
@@ -619,4 +642,76 @@ div#preload { display: none; }
     #form-div {
         justify-self: end;
     }
+}
+
+
+
+
+
+
+/* EXPERIMENTAL DARK MODE */
+
+.dark-mode {
+    background-color: rgb(18, 34, 53);
+}
+
+.dark-mode .topnav {
+    background-color: rgb(18, 34, 53);
+    border-bottom: 3px solid #FF6363;
+}
+
+.dark-mode h1 {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode h2 {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode p {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode a:hover {
+    color:rgb(145, 145, 145) !important;
+}
+
+.dark-mode footer {
+    background-color: rgb(18, 34, 53);
+}
+
+.dark-mode .yellow-text {
+    color: rgb(122, 118, 84) !important; 
+}
+
+.dark-mode .black-text {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode .icon-span {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode #university-icon {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode .nav-text {
+    color: rgb(233, 233, 233) !important;
+}
+
+.dark-mode .faint-text {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode .project-desc-text {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode .view-project-text {
+    color: rgb(233, 233, 233);
+}
+
+.dark-mode .project-card {
+    box-shadow: 0px 6px 20px rgb(0, 0, 0);
 }
