@@ -149,7 +149,18 @@ label {
     transform: scale(1);
 }
 
-/*
+input[type="submit"] {
+    cursor: pointer;
+    width: 30%;
+    margin-top: 6.4rem;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*s
 #foo:checked::before,
 input[type="radio"] {
     position:absolute;
@@ -478,7 +489,7 @@ div#preload { display: none; }
 #contact-form {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 3.2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -599,7 +610,7 @@ div#preload { display: none; }
     }
 
     section {
-        max-width: 50rem;
+        max-width: 60rem;
     }
 
     label {
