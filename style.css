@@ -178,10 +178,12 @@ div#preload { display: none; }
     width: 100%;
     padding: 3rem 0rem;
     z-index: 99;
+    border-bottom: 3px solid #000;
 }
 
 .nav-elements {
     width: 80%;
+    max-width: 150rem;
     margin: auto;
 }
 
@@ -417,6 +419,28 @@ div#preload { display: none; }
     to {opacity: 1}
 }
 
+/* Fade in animation */
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* Slide in animation */
+.slide-in {
+    animation-name: slide-in;
+    animation-duration: 1s;
+}
+
+@keyframes slide-in {
+    from {padding-top: 30rem}
+    to {padding-top: 0rem}
+}
+
 #main-title {
     width: 50%;
 }
@@ -433,8 +457,13 @@ div#preload { display: none; }
     display: grid;
     grid-template-columns: 1fr;
     width: 80%;
+    max-width: 150rem;
     padding-bottom: 10rem;
     margin: auto;
+}
+
+#portfolio-div {
+    display: none;
 }
 
 #contact-form {
@@ -444,6 +473,7 @@ div#preload { display: none; }
     align-items: center;
     padding: 3.2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    max-width: 40rem;
 }
 
 #com-pref-div {
@@ -463,6 +493,7 @@ div#preload { display: none; }
 
 #socials-div {
     width: 80%;
+    max-width: 150rem;
     margin: auto;
     padding: 1.6rem 0rem 1.6rem 0rem;
 }
@@ -490,6 +521,12 @@ div#preload { display: none; }
     float: left;
     border: 1px solid rgba(0, 0, 0, 0);
     margin-right: 0.8rem;
+}
+
+
+#about-imgs-div img {
+    max-height: 70vh;
+    width: auto;
 }
 
 @media screen and (max-width: 700px) {
@@ -529,5 +566,57 @@ div#preload { display: none; }
     }
     .topnav.responsive .nav-text.bottom-padding-mobile {
         padding-bottom: 1.6rem;
+    }
+}
+
+/* Desktop layout */
+@media screen and (min-width: 1000px) {
+    p {
+        font-size: 2.0rem;
+    }
+
+    section {
+        max-width: 50rem;
+    }
+
+    label {
+        font-size: 2.0rem;
+    }
+
+    input:not([type=submit]):not([type=radio]) {
+        font-size: 2.0rem;
+    }
+
+    .top-padding {
+        padding-top: 20rem;
+    }
+
+    .nav-text {
+        font-size: 2.0rem;
+    }
+
+    .view-project-text {
+        font-size: 1.8rem;
+    }
+
+    .project-desc-text {
+        font-size: 1.8rem;
+    }
+
+    #main-div {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10rem;
+    }
+
+    #portfolio-div {
+        display: block;
+    }
+
+    #about-imgs-div {
+        justify-self: end;
+    }
+
+    #form-div {
+        justify-self: end;
     }
 }

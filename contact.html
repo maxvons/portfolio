@@ -30,7 +30,7 @@
         </div>
     </nav>
 
-    <div id="main-div" class="top-padding">
+    <div id="main-div" class="top-padding fade-in">
         <section class="bottom-margin">
             <header>
                 <h1 class="regular-text">Contact me</h1>
@@ -39,32 +39,34 @@
 
             <p class="line-height-paragraph">Shoot me an email at <strong>
                 maximilianvons@gmail.com</strong>. Or contact me through the
-                form down below. Why not both? Whichever you prefer.
+                form on this page. Why not both? Whichever you prefer.
             </p>  
         </section>
         
+        <div id="form-div">
         <h2 class="black-text">Let's talk.</h2>
-        <form id="contact-form" action="submit">
-            <label for="name" class="sr-only">Enter your name</label>
-            <input type="text" placeholder="Name" name="name" id="name" required>
+            <form id="contact-form" action="submit">
+                <label for="name" class="sr-only">Enter your name</label>
+                <input type="text" placeholder="Name" name="name" id="name" required>
 
-            <label for="email" class="sr-only">Enter your email</label>
-            <input type="email" placeholder="Email" name="email" id="email" required>
+                <label for="email" class="sr-only">Enter your email</label>
+                <input type="email" placeholder="Email" name="email" id="email" required>
 
-            <label for="phone" class="sr-only">Enter your phone number</label>
-            <input type="tel" placeholder="Phone" name="phone" id="phone">
-                
-            <div id="com-pref-div">
-                <p id="pref-text" class="light-text">Preffered method of communication</p>
-                <input type="radio" id="radio-email" name="com-pref" value="email" checked="checked" required>
-                <label id="radio-email-label" for="radio-email">Email</label>
-                <input type="radio" id="radio-phone" name="com-pref" value="phone" required>
-                <label id="radio-phone-label" for="radio-phone">Phone</label>
-            </div>
-        
-            <label for="message" class="sr-only">Enter your message</label>
-            <input type="text" placeholder="Message" name="message" id="message">
-        </form>
+                <label for="phone" class="sr-only">Enter your phone number</label>
+                <input type="tel" placeholder="Phone" name="phone" id="phone">
+                    
+                <div id="com-pref-div">
+                    <p id="pref-text" class="light-text">Preffered method of communication</p>
+                    <input type="radio" id="radio-email" name="com-pref" value="email" checked="checked" required>
+                    <label id="radio-email-label" for="radio-email">Email</label>
+                    <input type="radio" id="radio-phone" name="com-pref" value="phone" required>
+                    <label id="radio-phone-label" for="radio-phone">Phone</label>
+                </div>
+            
+                <label for="message" class="sr-only">Enter your message</label>
+                <input type="text" placeholder="Message" name="message" id="message">
+            </form>
+        </div>
     </div>
     
     <footer>

@@ -9,6 +9,10 @@
     multiple different programming fields. Student at the University of Oslo.">
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/d9079d9ed4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,7 +34,7 @@
         </div>
     </nav>
     
-    <div id="main-div" class="top-padding">
+    <div id="main-div" class="top-padding fade-in">
         <section>
             <header>
                 <h1 id="main-title" class="bold-text">Hi, I'm Maximilian.</h1>
@@ -45,8 +49,42 @@
                 Maybe <strong>you</strong> could be instrumental in making that change? 
                 On this site you will find a complete list of my 
                 <strong>projects</strong>, <strong>contact information</strong> 
-                and <strong>more</strong></p>  
+                and <strong>more</strong>.</p>  
         </section>
+
+        <div id="portfolio-div">
+            <h2 class="black-text">My portfolio</h2>
+
+            <div class="project-card bottom-margin">
+                <img src="pictures/oslotour.svg" alt="OsloTour application">
+                <div class="project-text">
+                    <p class="left-padding right-margin">OsloTour</p>
+                    <p class="right-margin faint-text">|</p>
+                    <p class="project-desc-text">Tourist guide for Oslo</p>
+                </div>
+                <a href="oslotour.html">
+                    <p class="left-padding view-project-text">
+                        View this project
+                        <i class="fas fa-long-arrow-alt-right fa-fw"></i>
+                    </p>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <img src="pictures/portfolio.svg" alt="My portfolio">
+                <div class="project-text">
+                    <p class="left-padding right-margin">Portfolio</p>
+                    <p class="right-margin faint-text">|</p>
+                    <p class="project-desc-text">My brand new portfolio</p>
+                </div>
+                <a href="portfolio.html">
+                    <p class="left-padding view-project-text">
+                        View this project
+                        <i class="fas fa-long-arrow-alt-right fa-fw"></i>
+                    </p>
+                </a>
+            </div>
+        </div>
     </div>
     
     <footer>
