@@ -2,12 +2,15 @@
     when the user clicks on the menu icon */
 function toggleMobileMenu() {
     var x = document.getElementById("navbar");
+    var menu_icon = document.getElementById("menu-icon");
     var m_div = document.getElementById("main-div");
     if (x.className === "topnav") {
         x.className += " responsive";
+        menu_icon.className += " rotate";
         m_div.className += " top-extra-padding";
     } else {
         x.className = "topnav";
+        menu_icon.className = "nav-icon";
         m_div.className = "top-padding";
     }
 }

@@ -44,6 +44,11 @@ p {
 img {
     height: auto;
     max-width: 100%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
 }
 
 a:link, a:visited {
@@ -233,6 +238,10 @@ div#preload { display: none; }
     text-transform: uppercase;
 }
 
+.rotate {
+    transform: rotate(-90deg);
+}
+
 /*
 .nav-text:hover {
     color: gray;
@@ -402,17 +411,17 @@ div#preload { display: none; }
 .img-gallery-wrapper {
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
     padding: 1.6rem;
+    max-width: 45rem;
 }
 
 .img-gallery-item {
-    user-select: none;
     display: none;
 }
 
 .prev, .next {
     cursor: pointer;
     font-size: 5rem;
-    transition: 0.6s ease;
+    transition: 0.5s ease;
     user-select: none;
 }
 
@@ -428,7 +437,7 @@ div#preload { display: none; }
     margin: 0.8rem 0.2rem 0.8rem 0.2rem;
     background-color: #bbb;
     border-radius: 50%;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.5s ease;
 }
 
 .active, .dot:hover {
@@ -485,6 +494,7 @@ div#preload { display: none; }
 
 #menu-icon {
     font-size: 4.5rem;
+    transition: transform .5s ease;
 }
 
 #main-div {
@@ -673,6 +683,10 @@ div#preload { display: none; }
         font-size: 1.8rem;
     }
 
+    .img-gallery-wrapper {
+        justify-self: end;
+    }
+
     #main-div {
         grid-template-columns: 1fr 1fr;
         column-gap: 10rem;
@@ -691,6 +705,12 @@ div#preload { display: none; }
     }
 }
 
+/* Huge screens */
+@media screen and (min-width: 1800px) {
+    .img-gallery-wrapper {
+        max-width: 100rem;
+    }
+}
 
 
 
@@ -739,12 +759,12 @@ div#preload { display: none; }
     color: rgb(233, 233, 233);
 }
 
-.dark-mode #university-icon {
-    color: rgb(233, 233, 233);
-}
-
 .dark-mode .nav-text {
     color: rgb(233, 233, 233) !important;
+}
+
+.dark-mode .nav-icon {
+    color: rgb(233, 233, 233);
 }
 
 .dark-mode .faint-text {
@@ -761,4 +781,8 @@ div#preload { display: none; }
 
 .dark-mode .project-card {
     box-shadow: 0px 6px 20px rgb(0, 0, 0);
+}
+
+.dark-mode #university-icon {
+    color: rgb(233, 233, 233);
 }
