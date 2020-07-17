@@ -12,7 +12,7 @@
     $to = $my_email;
     $email_subject = "Contact form submission: $name";
     $email_body = "You have received a message. Here are the details:\nName: $name\nEmail: $sender_email\nPhone: $phone\nContact preference: $pref\nMessage: $msg";
-    $headers = "From: maximilianvons@gmail.com" . "\r\n" . 
+    $headers = "From: form@maximilian.netlify.app" . "\r\n" . 
                 "Reply-To: $sender_email";
     
     mail($to,$email_subject,$email_body, $headers);
