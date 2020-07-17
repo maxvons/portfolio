@@ -580,6 +580,7 @@ div#preload { display: none; }
     background: none;
     border: none;
     float: right;
+    -webkit-appearance: none;
   }
   
 .color-mode_btn svg {
