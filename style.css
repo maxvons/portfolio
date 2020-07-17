@@ -744,6 +744,12 @@ div#preload { display: none; }
     width: auto;
 }
 
+@media screen and (max-width: 400px) {
+    input[type="submit"] {
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 700px) {
     #nav-text-link-div {display: none;}
     .topnav a.nav-icon {
