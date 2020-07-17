@@ -31,6 +31,22 @@ const toggleColorMode = e => {
 
         // Switch to black logo
         logo.src = "icons/icon_black.svg";
+
+        // Switch to light portfolio pics
+        var s_path = window.location.pathname;
+        var s_page = s_path.substring(s_path.lastIndexOf('/') + 1);
+
+        if (s_page == "portfolio.html") {
+            var p_pic_land = document.getElementById("portfolio-pic1");
+            var p_pic_proj = document.getElementById("portfolio-pic2");
+            var p_pic_abt = document.getElementById("portfolio-pic3");
+            var p_pic_ctc = document.getElementById("portfolio-pic4");
+
+            p_pic_land.src = "pictures/portfolio_iphone_landing.png";
+            p_pic_proj.src = "pictures/portfolio_iphone_projects.png";
+            p_pic_abt.src = "pictures/portfolio_iphone_about.png";
+            p_pic_ctc.src = "pictures/portfolio_iphone_contact.png";
+        }
         return;
     }
 
@@ -42,6 +58,22 @@ const toggleColorMode = e => {
 
     // Switch to white logo
     logo.src = "icons/icon_white.svg";
+
+    // Switch to light portfolio pics
+    var s_path = window.location.pathname;
+    var s_page = s_path.substring(s_path.lastIndexOf('/') + 1);
+
+    if (s_page == "portfolio.html") {
+        var p_pic_land = document.getElementById("portfolio-pic1");
+        var p_pic_proj = document.getElementById("portfolio-pic2");
+        var p_pic_abt = document.getElementById("portfolio-pic3");
+        var p_pic_ctc = document.getElementById("portfolio-pic4");
+
+        p_pic_land.src = "pictures/portfolio_iphone_landing_dark.png";
+        p_pic_proj.src = "pictures/portfolio_iphone_projects_dark.png";
+        p_pic_abt.src = "pictures/portfolio_iphone_about_dark.png";
+        p_pic_ctc.src = "pictures/portfolio_iphone_contact_dark.png";
+    }
 };
     
 // Get the buttons in the DOM

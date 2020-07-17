@@ -145,6 +145,7 @@ input:not([type=submit]):not([type=radio]) {
     width: 100%;
     font-family: Roboto, Arial;
     background-color: var(--form-background, #FFF);
+    color: var(--text-primary-color, rgba(0, 0, 0, 0.87));
     font-weight: 300;
     font-size: 1.8rem;
     margin-bottom: 1.6rem;
