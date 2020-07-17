@@ -16,7 +16,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/d9079d9ed4.js" crossorigin="anonymous"></script>
-    <!--
     <script>
         if (
           localStorage.getItem("color-mode") === "dark" ||
@@ -26,7 +25,6 @@
           document.documentElement.setAttribute("color-mode", "dark");
         }
       </script>
-      -->
 </head>
 
 <body class="hide-scroll">
@@ -200,6 +198,38 @@
         </div>
     </footer>
 
+    <!-- Check if logo needs to change -->
+    <script>
+        var logo = document.getElementById("logo");
+
+        if (localStorage.getItem("color-mode") === "dark" && 
+            logo.src != "icons/icon_white.svg" || 
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+            !localStorage.getItem("color-mode") && 
+            logo.src != "icons/icon_white.svg")
+            ) {
+            document.getElementById("logo").src = "icons/icon_white.svg";
+            var p_pic_land = document.getElementById("portfolio-pic1");
+            var p_pic_proj = document.getElementById("portfolio-pic2");
+            var p_pic_abt = document.getElementById("portfolio-pic3");
+            var p_pic_ctc = document.getElementById("portfolio-pic4");
+
+            p_pic_land.src = "pictures/portfolio_iphone_landing_dark.png";
+            p_pic_proj.src = "pictures/portfolio_iphone_projects_dark.png";
+            p_pic_abt.src = "pictures/portfolio_iphone_about_dark.png";
+            p_pic_ctc.src = "pictures/portfolio_iphone_contact_dark.png";
+        }   else {
+            var p_pic_land = document.getElementById("portfolio-pic1");
+            var p_pic_proj = document.getElementById("portfolio-pic2");
+            var p_pic_abt = document.getElementById("portfolio-pic3");
+            var p_pic_ctc = document.getElementById("portfolio-pic4");
+
+            p_pic_land.src = "pictures/portfolio_iphone_landing.png";
+            p_pic_proj.src = "pictures/portfolio_iphone_projects.png";
+            p_pic_abt.src = "pictures/portfolio_iphone_about.png";
+            p_pic_ctc.src = "pictures/portfolio_iphone_contact.png";
+        }
+    </script>
     <script src="image_slider_fun.js"></script>
     <script src="mobile_menu_fun.js"></script>
 </body>

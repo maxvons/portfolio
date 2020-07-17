@@ -6,7 +6,7 @@
     $pref = htmlspecialchars($_POST['com-pref']);
     $msg = htmlspecialchars($_POST['message']);
 
-    echo  $name, ' ', $sender_email, ' ', $phone, ' ', $pref, ' ', $msg;
+    /*echo  $name, ' ', $sender_email, ' ', $phone, ' ', $pref, ' ', $msg;*/
     
    
     $to = $my_email;
@@ -17,7 +17,7 @@
     
     mail($to,$email_subject,$email_body, $headers);
 
-    header('Location: contact_finished.html');
+    /*header('Location: contact_finished.html');*/
 ?>
 
 

@@ -141,6 +141,19 @@ input {
     outline: none;
 }
 
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #ffedf1 inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.87) !important;
+}
+
 input:not([type=submit]):not([type=radio]) {
     width: 100%;
     font-family: Roboto, Arial;
@@ -415,7 +428,8 @@ div#preload { display: none; }
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-family: Roboto, Arial;
-    font-weight: bold;
+    font-weight: 400;
+    text-transform: uppercase;
     font-size: 1.6rem;
 }
 

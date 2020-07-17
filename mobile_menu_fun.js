@@ -27,7 +27,7 @@ const toggleColorMode = e => {
         document.documentElement.setAttribute("color-mode", "light");
         
         // Set pref in local storage
-        localStorage.setItem('color-mode', 'light');
+        localStorage.setItem("color-mode", "light");
 
         // Switch to black logo
         logo.src = "icons/icon_black.svg";
