@@ -17,8 +17,6 @@
     
     mail($to,$email_subject,$email_body, $headers);
 
-    header("Location: https://www.google.com");
+    header("Location:https://www.google.com");
+    exit();
 ?>
-
-
-
