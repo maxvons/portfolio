@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximilian - Projects</title>
+    <meta name="description" content="Check out my projects here. 
+    Apps, websites and more.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tachyons-animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/d9079d9ed4.js" crossorigin="anonymous"></script>
+    <script>
+        if (
+          localStorage.getItem("color-mode") === "dark" ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+            !localStorage.getItem("color-mode"))
+        ) {
+          document.documentElement.setAttribute("color-mode", "dark");
+        }
+      </script>
+</head>
+
+<body class="hide-scroll">
+    
+    <nav id="navbar" class="topnav">
+        <div class="nav-elements">
+            <a href="index.html" class="left-float">
+                <img id="logo" src="icons/icon_black.svg" alt="logo">
+            </a>
+            <div id="nav-text-link-div">
+                <a href="projects.html" class="nav-text padding-mobile active-link">Projects</a>
+                <a href="about.html" class="nav-text left-margin bottom-padding-mobile">About Me</a>
+                <a href="contact.html" class="nav-text left-margin">Contact Me</a>
+            </div>
+            <a id="menu-icon" href="javascript:void(0);" class="nav-icon" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Check if logo needs to change -->
+    <script>
+        var logo = document.getElementById("logo");
+
+        if (localStorage.getItem("color-mode") === "dark" && 
+            logo.src != "icons/icon_white.svg" || 
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+            !localStorage.getItem("color-mode") && 
+            logo.src != "icons/icon_white.svg")
+            ) {
+            document.getElementById("logo").src = "icons/icon_white.svg";
+        }
+    </script>
+
+    <div id="main-div" class="top-padding animate__animated animate__fadeIn">
+        <section class="bottom-margin">
+            <header>
+                <h1 class="regular-text animate__animated animate__fadeInLeft">Projects</h1>
+                <h2>Check out what I've done.</h2>
+            </header>
+
+            <p class="line-height-paragraph">Scroll through my list of projects 
+                if you want.
+                I promise I won't force you.
+            </p>  
+        </section>
+        
+        <div id="projects-div">
+            <h2 class="black-text">My portfolio</h2>
+
+            <div class="project-card bottom-margin">
+                <img src="pictures/oslotour.svg" alt="OsloTour application">
+                <div class="project-text">
+                    <p class="left-padding right-margin">OsloTour</p>
+                    <p class="right-margin faint-text">|</p>
+                    <p class="project-desc-text">Tourist guide for Oslo</p>
+                </div>
+                <a href="oslotour.html" class="left-padding view-project-text">
+                    View this project
+                    <i class="fas fa-long-arrow-alt-right fa-fw"></i>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <img src="pictures/portfolio_banner_iphone_red.jpg" alt="My portfolio">
+                <div class="project-text">
+                    <p class="left-padding right-margin">Portfolio</p>
+                    <p class="right-margin faint-text">|</p>
+                    <p class="project-desc-text">My brand new portfolio</p>
+                </div>
+                <a href="portfolio.html" class="left-padding view-project-text">
+                    View this project
+                    <i class="fas fa-long-arrow-alt-right fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer>
+        <div id="socials-div">
+            <a href="https://github.com/maxvons" target="_blank">
+                <span class="icon-span">
+                    <i class="fab fa-github-square"></i>
+                </span>
+            </a>
+            <a href="https://www.linkedin.com/in/maximilian-von-s-84073196/" target="_blank">
+                <span class="icon-span">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+            </a>
+            <a href="mailto:maximilianvons@gmail.com?subject=Mail%20from%20our%20site&body=Body%20goes%20here" target="_blank">
+            <span class="icon-span">
+                <i class="fas fa-envelope-square"></i>
+            </span>
+            </a>
+            
+            <svg style="display: none;">
+                <symbol viewBox="0 0 24 24" id="moon">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="sun">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </symbol>
+              </svg>
+
+            <!-- Light mode button -->
+            <button
+                class="color-mode_btn light-hidden uppercase"
+                aria-label="Toggle light mode">
+                Light
+                <svg aria-hidden="true">
+                    <title>Light Mode</title>
+                    <use href="#sun"></use>
+                </svg>
+            </button>
+
+            <!-- Dark mode button -->
+            <button
+                class="color-mode_btn dark-hidden uppercase"
+                aria-label="Toggle dark mode">
+                Dark
+                <svg aria-hidden="true">
+                    <title>Dark Mode</title>
+                    <use href="#moon"></use>
+                </svg>
+            </button>
+
+        </div>
+    </footer>
+
+    <script src="mobile_menu_fun.js"></script>
+</body>
+</html>
