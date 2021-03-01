@@ -29,7 +29,7 @@
         ) {
           document.documentElement.setAttribute("color-mode", "dark");
         }
-      </script>
+    </script>
 </head>
 
 <body class="hide-scroll">
@@ -54,7 +54,7 @@
     <script>
         var logo = document.getElementById("logo");
 
-        if (localStorage.getItem("color-mode") === "dark" && 
+        if (localStorage.getItem("color-mode") === "dark" &&
             logo.src != "icons/icon_white.svg" || 
             (window.matchMedia("(prefers-color-scheme: dark)").matches &&
             !localStorage.getItem("color-mode") && 
