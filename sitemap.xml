@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.maxvons.no/</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.maxvons.no/projects.html</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.maxvons.no/about.html</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.maxvons.no/contact.html</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.maxvons.no/oslotour.html</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.maxvons.no/portfolio.html</loc>
+        <lastmod>2021-03-02T11:53:16+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+</urlset>
